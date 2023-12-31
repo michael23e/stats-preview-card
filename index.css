@@ -7,49 +7,50 @@
 body {
   background: hsl(233, 47%, 7%);
   color: hsl(0, 0%, 100%);
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .container {
-  margin: auto;
-  width: 60%;
-  height: 50%;
+  max-width: 900px;
+  width: 95%;
   display: flex;
-  flex-direction: row;
-  margin-top: 10%;
   border-radius: 25px;
-  object-fit: cover;
   overflow: hidden;
+  height: 380px;
+
 }
+
 .info {
   background: hsl(244, 38%, 16%);
-  width: 50%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   column-gap: 20px;
   justify-content: space-between;
   padding: 25px;
+  width: 90%;
+  
 }
-.pic {
+.pic{
+  width: 100%;
+  background-image: url(images/image-header-desktop.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100%;
-  width: 50%;
-  background-image: url(/images/image-header-desktop.jpg);
-}
-.pic img {
-  max-width: inherit;
-  height: 100%;
-  object-fit: cover;
-  overflow: hidden;
+
+  
 }
 h2 {
   font-weight: 700;
-  font-size: 2em;
+  font-size: 2.5em;
   letter-spacing: 1.5px;
+  padding: 15px 0;
 }
 .ins {
-  color: hsl(277, 64%, 61%);
+  color: #aa5cdb;
 }
 .snip p {
   color: hsla(0, 0%, 100%, 0.7);
@@ -58,6 +59,7 @@ h2 {
   letter-spacing: 1.3px;
   font-weight: 400;
   font-family: "Lexend Deca", sans-serif;
+
 }
 .imp {
   display: flex;
@@ -73,36 +75,39 @@ h2 {
   color: hsla(0, 0%, 100%, 0.6);
   font-weight: 400;
 }
-@media screen and (max-width: 375px) {
-    html{
-        scroll-behavior: smooth;
-    }
+.pic img{
+  display: none;
+}
+.overlay{
+  height: 100%;
+  width: 100%;
+  background-color: #aa5cdb90;
+}
+@media screen and (max-width: 600px) {
   .container {
     display: flex;
     flex-direction: column-reverse;
-    width: 375px;
-    height: 100%;
+    height: 700px;
   }
 
   .pic {
-    background-image: url(/images/image-header-mobile.jpg);
-    width: 100%;
-    object-fit: cover;
-    overflow: hidden;
-    height: 60%;
+    height: 50%;
+    background-image: url(images/image-header-mobile.jpg);
   }
+
   .info {
     display: flex;
-    height: 70%;
+    height: 50%;
     width: 100%;
     flex-direction: column;
+    text-align: center;
 
   }
   .snip p{
-    font-size: 1.2rem;
+    font-size: 14px;
   }
-  h2 {
-    font-size: 2.rem;
+  h1 {
+    font-size: 1.8rem;
     font-weight: 700;
   }
   h2:last-of-type{
